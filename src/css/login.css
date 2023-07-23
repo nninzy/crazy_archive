@@ -1,0 +1,118 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: var(--background-blue);
+}
+.login .login-bg-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100vh;
+    transform: translate(-50%, 0%);
+}
+.login .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-blue2);
+    width: 50%;
+    height: 80%;
+    padding: 1rem;
+    border: 3px solid var(--background-blue);
+    border-radius: 1rem;
+    box-shadow: .5rem .5rem 2px 1px rgba(0, 0, 0, .5);
+}
+.login .login-container .login__chracters {
+    display: grid;
+    width: 100%;
+    height: 75%;
+    grid-template-columns: repeat(3, 31.5%);
+    grid-template-rows: repeat(3, 30.7%);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin: 1rem 0 2rem;
+}
+.login .login-container .login__chracters .login__chracter {
+    position: relative;
+    background-color: var(--container-deepblue);
+    transition: .3s;
+    background-repeat: no-repeat;
+    background-position: 6.5rem 0;
+    background-size: 7.5rem;
+}
+.login .login-container .login__chracters .login__chracter.bazzi {
+    background-image: url(../images/chracter--01.png);
+}
+.login .login-container .login__chracters .login__chracter.dao {
+    background-image: url(../images/chracter--02.png);
+}
+.login .login-container .login__chracters .login__chracter.uny {
+    background-image: url(../images/chracter--03.png);
+}
+.login .login-container .login__chracters .login__chracter.dizni {
+    background-image: url(../images/chracter--04.png);
+}
+.login .login-container .login__chracters .login__chracter.mos {
+    background-image: url(../images/chracter--05.png);
+}
+.login .login-container .login__chracters .login__chracter.ethi {
+    background-image: url(../images/chracter--06.png);
+}
+.login .login-container .login__chracters .login__chracter.marid {
+    background-image: url(../images/chracter--07.png);
+}
+.login .login-container .login__chracters .login__chracter.kephi {
+    background-image: url(../images/chracter--08.png);
+}
+.login .login-container .login__chracters .login__chracter.random {
+    background-image: url(../images/random.png);
+}
+.login .login-container .login__chracters .login__chracter:hover {
+    background-color: var(--container-bluegray);
+}
+.login .login-container .login__chracters .login__chracter.chosen {
+    background-color: var(--chosen-yellow);
+}
+.login .login-container .login__chracters .login__chracter .chracter__name {
+    position: absolute;
+    bottom: 2rem;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    color: #ffff;
+    font-weight: 700;
+}
+.login .login__form {
+    width: 100%;
+    display: flex;
+    height: calc(100% - 80% - 2rem);
+    align-items: center;
+}
+.login .login__form .form__nickname {
+    width: 75%;
+    height: 70%;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+}
+.login .login__form .form__nickname::placeholder {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.login .login__form .form__submit {
+    width: calc(100% - 75% - 1rem);
+    height: 100%;
+    border: 5px solid #fff;
+    border-radius: 1rem;
+    background-color: var(--chosen-yellow);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFF;
+}
+.login .login__form .form__submit:hover {
+    background-color: var(--subject-yellow);
+}

@@ -1,0 +1,6 @@
+
+.after-login {
+    background-color: var(--background-blue);
+    height: 100vh;
+    position: relative;
+}

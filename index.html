@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Archive</title>
+    <!-- og & twitter card -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Crazy Archive" />
+    <meta property="og:title" content="Crazy Archive - managing your schedule like game" />
+    <meta property="og:description" content="게임처럼 브라우저 첫 화면을 꾸며보세요" />
+    <meta property="og:image" content="./src/images/og-image.jpg" />
+    <meta property="og:url" content="https://starbucks.co.kr" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="Crazy Archive" />
+    <meta property="twitter:title" content="Crazy Archive - managing your schedule like game" />
+    <meta property="twitter:description" content="게임처럼 브라우저 첫 화면을 꾸며보세요" />
+    <meta property="twitter:image" content="./src/images/og-image.jpg" />
+    <meta property="twitter:url" content="https://starbucks.co.kr" />
+    <!-- about-pages -->
+    <link rel="icon" href="src/images/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- js  -->
+    <script defer src="src/js/key.js"></script>
+    <script defer src="src/js/login-out.js"></script>
+    <script defer src="src/js/calendar.js"></script>
+    <script defer src="src/js/todo.js"></script>
+    <script defer src="src/js/realTime.js"></script>
+    <script defer src="src/js/weather.js"></script>
+</head>
+
+<body>
+<!-- 본 페이지 -->
+    <div class="after-login d-none">
+        <header class="header">
+            <section class="header-container--left">
+                <div class="header__real-time"> AM 00 : 00 : 00 </div>
+                <div class="header__weather"></div>
+            </section>
+            <section class="header-container--right">
+                <div class="header__calculator material-symbols-outlined">calculate</div>
+                <div class="header__timer material-symbols-outlined">timelapse</div>
+                <div class="header__chat-gpt material-symbols-outlined">chat</div>
+                <div class="header__logout material-symbols-outlined">power_settings_new</div>
+            </section>
+            <label for="search--google" class="search-google">
+                <h3>Google</h3>
+                <div class="material-symbols-outlined">arrow_forward_ios</div>
+                <form class="search__form" method="get" action="http://www.google.co.kr/search" target="_blank" />
+                    <input class="d-none" type="text" id="search--google" placeholder="구글에 검색할 내용을 입력하세요" name="q" size=25 maxlength=255 value=""/>
+                    <input class="d-none" type="submit" name="btnG" value="검 색"/>
+                </form>
+            </label>
+        </header>
+
+        <aside class="side-bar">
+            <div class="profile-chracter">
+                <img src="src/images/chracter--01.png" alt="기본 캐릭터">
+            </div>
+            <div class="user-profile">
+                <div class="user-name"></div>
+                <div class="user-level">Lv 01</div>
+            </div>
+            <div class="bookmark">
+                <div class="bookmark__top">
+                    <div class="bookmark__title">북마크</div>
+                    <div class="bookmark__add material-symbols-outlined">add</div>
+                </div>
+                <div class="bookmark__bottom">
+                    <a class="bookmark__item" href="http://www.google.com">google</a>
+                    <a class="bookmark__item" href="https://nomadcoders.co/">Nomad Coder</a>
+                    <a class="bookmark__item" href="https://github.com/">github</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <section class="main__subject-container">
+                <div class="subject-wrapper">
+                    <div class="subject__white-board">화이트 보드</div>
+                </div>
+                <div class="subject-wrapper">
+                    <div class="subject__mini-game">미니 게임</div>
+                </div>
+                <div class="subject-wrapper page-now"> 
+                    <div class="subject__today">투데이</div>
+                </div>
+            </section>
+            <section class="main__content" id="content--today">
+                <div class="today__calendar">
+                    <div class="calendar__header">
+                        <button class="cal-head__nav-btn go-prev material-symbols-outlined">arrow_back_ios_new</button>
+                        <div class="cal-head__this-month"></div>
+                        <button class="cal-head__nav-btn go-next material-symbols-outlined">arrow_forward_ios</button>
+                        <button class="cal-head__nav-btn go-today">TODAY</button>
+                    </div>
+                    <div class="calendar__main">
+                        <div class="days">
+                            <div class="day">SUN</div>
+                            <div class="day">MON</div>
+                            <div class="day">TUE</div>
+                            <div class="day">WED</div>
+                            <div class="day">THU</div>
+                            <div class="day">FRI</div>
+                            <div class="day">SAT</div>
+                        </div>
+                        <div class="dates"></div>
+                    </div>
+                </div>
+                <div class="today__todo">
+                    <h3>To Do List</h3>
+                    <form action="" class="todo__form">
+                        <input type="text" class="todo__form__input" placeholder="오늘 할 일을 입력하세요">
+                    </form>
+                    <ul class="todo__list"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+<!-- 로그인 페이지 -->
+    <div class="login">
+        <img class="login-bg-img" src="./src/images/bg-image--01.jpg" alt="기본 배경 이미지">
+        <div class="login-container">
+            <div class="login__chracters">
+                <div class="login__chracter bazzi chosen">
+                    <span class="chracter__name">BAZZI</span>
+                </div>
+                <div class="login__chracter dao">
+                    <span class="chracter__name">DAO</span>
+                </div>
+                <div class="login__chracter uny">
+                    <span class="chracter__name">UNY</span>
+                </div>
+                <div class="login__chracter dizni">
+                    <span class="chracter__name">DIZNI</span>
+                </div>
+                <div class="login__chracter mos">
+                    <span class="chracter__name">MOS</span>
+                </div>
+                <div class="login__chracter ethi">
+                    <span class="chracter__name">ETHI</span>
+                </div>
+                <div class="login__chracter marid">
+                    <span class="chracter__name">MARID</span>
+                </div>
+                <div class="login__chracter kephi">
+                    <span class="chracter__name">KEPHI</span>
+                </div>
+                <div class="login__chracter random">
+                    <span class="chracter__name">RANDOM</span>
+                </div>
+            </div>
+            <form action="" class="login__form">
+                <input type="text" class="form__nickname" autocomplete="off" placeholder="닉네임을 입력하세요" />
+                <button tyoe="submit" class="form__submit">시 작</button>
+            </form>
+        </div>
+    </div>
+
+<!-- 로딩 페이지 -->
+    <div class="loading-splash">
+
+    </div>
+</body>
+</html>

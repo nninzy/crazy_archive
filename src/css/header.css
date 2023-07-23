@@ -1,0 +1,98 @@
+
+/* header */
+.header {
+    background-color: var(--content-realblue);
+    color: white;
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 2.5rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    padding: 0.5rem 2.5rem;
+    z-index: 10;
+}
+.header .header-container--left {
+    display: flex;
+    align-items: center;
+}
+.header section div {
+    margin: 0 1rem;
+}
+.header .header-container--left .header__real-time {
+    width: 9rem;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    color: whie;
+}
+.header .header-container--right div {
+    width: 2.5rem;
+    height: 1.8rem;
+    text-align: center;
+    line-height: 1.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.header .header-container--right div:hover {
+    opacity: .7;
+}
+.header .header-container--right .header__calculator {
+    background-color: var(--content-light-green);
+}
+.header .header-container--right .header__timer {
+    background-color: var(--content-brightblue2);
+}
+.header .header-container--right .header__chat-gpt {
+    background-color: var(--content-darkgreen);
+}
+.header .header-container--right .header__logout {
+    background-color: var(--content-red);
+}
+
+/* google 검색 */
+.header .search-google {
+    background-color: var(--container-bluegray);
+    height: 3rem;
+    position: absolute;
+    top: -3rem;
+    left: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    cursor: pointer;
+}
+.header .search-google:hover h3, .header .search-google:hover > div {
+    color: var(--dark-gray);
+}
+.header .search-google h3 {
+    margin-right: 0.5rem;
+}
+.header .search-google > div {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.header .search-google .search__form {
+    display: flex;
+    margin-left: 0.5rem;
+}
+.header .search-google .search__form input:first-child {
+    width: 50rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    padding: 0 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.header .search-google .search__form input:last-child {
+    background-color: var(--content-ligthblue);
+    color: white;
+    font-weight: 700;
+    width: 5rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+}

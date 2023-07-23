@@ -1,0 +1,102 @@
+
+/* 사이드 메뉴 */
+.side-bar {
+    background-color: var(--container-bluegray);
+    color: white;
+    width: 16rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 3.5rem;
+}
+.side-bar .profile-chracter {
+    background-color: var(--container-deepblue);
+    min-width: 10rem;
+    min-height: 10rem;
+    max-height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+.side-bar .profile-chracter img {
+    display: block;
+    height: 85%;
+}
+.side-bar .user-profile {
+    background-color: var(--container-deepblue);
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+}
+.side-bar .user-profile div {
+    background-color: var(--content-deepblue);
+    width: 10rem;
+    height: 1.7rem;
+    text-align: center;
+    line-height: 1.7rem;
+    font-weight: 700;
+}
+.side-bar .user-profile .user-name {
+    margin-bottom: 0.5rem;
+}
+.side-bar .bookmark {
+    width: 14rem;
+    height: calc(100vh - 20rem);
+    border-radius: 0.5rem;
+}
+.side-bar .bookmark .bookmark__top {
+    height: 2.5rem;
+    display: flex;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+.side-bar .bookmark .bookmark__top .bookmark__title {
+    background-color: var(--container-deepblue);
+    height: 2.5rem;
+    width: 80%;
+    border-radius: 0.5rem 0 0 0;
+}
+.side-bar .bookmark .bookmark__top .bookmark__add {
+    background-color: var(--content-realblue);
+    width: 20%;
+    border-radius: 0 0.5rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+.side-bar .bookmark .bookmark__top .bookmark__add:hover {
+    opacity: .7;
+}
+.side-bar .bookmark .bookmark__bottom {
+    background-color: var(--container-deepblue);
+    height: calc(100% - 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.side-bar .bookmark .bookmark__bottom .bookmark__item {
+    background-color: var(--content-deepblue);
+    width: 12rem;
+    height: 1.7rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+    border-radius: 0.3rem;
+    line-height: 1.7rem;
+}
+.side-bar .bookmark .bookmark__bottom .bookmark__item:hover {
+    opacity: .7;
+}
