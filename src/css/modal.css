@@ -1,0 +1,94 @@
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--content-brightblue);
+    padding: 1rem;
+    border: 3px solid var(--content-lightblue);
+    border-radius: .5rem;
+}
+.modal__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.modal__top .modal__title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.modal--bookmark .modal-container {
+    width: 30rem;
+    height: 15rem;
+}
+.modal--bookmark .modal__main {
+    position: relative;
+}
+.modal--bookmark .modal__main form {
+    background-color: var(--background-blue);
+    border-radius: .5rem;
+    padding: 1rem;
+    color:#fff;
+    font-weight: 700;
+    position: relative;
+}
+.modal--bookmark .bookmark__main__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.modal--bookmark .bookmark__main__container:first-child {
+    margin-bottom: .5rem;
+}
+.modal--bookmark .modal__main form {
+    position: relative;
+}
+.modal--bookmark .bookmark__main__container .bookmark__label {
+    width: 9rem;
+    background-color: var(--content-realblue);
+    padding: .5rem;
+    text-align: center;
+    border-radius: .5rem;
+    margin-right: 1rem;
+}
+.modal--bookmark .bookmark__main__container input {
+    width: 20rem;
+    text-align: center;
+}
+.modal--bookmark .bookmark__main__container input::placeholder {
+    text-align: center;
+}
+.bookmark__btn {
+    background-color: var(--content-ligthblue);
+    width: 5rem;
+    text-align: center;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: #fff;
+    font-weight: 700;
+}
+.bookmark__btn:hover {
+    background-color: var(--content-realblue);
+}
+.bookmark__btn--submit {
+    position: absolute;
+    bottom: -3rem;
+    left: 7rem;
+}
+.bookmark__btn--cancel {
+    position: absolute;
+    right: 8.5rem;
+    bottom: -3rem;
+}

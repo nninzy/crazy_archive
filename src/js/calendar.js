@@ -33,7 +33,7 @@ const renderCalendar = () => {
 
     dates.forEach((date, i) => {
         const condition = i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other'
-        dates[i] = `<div class="dates"><span class="${condition} date">${date}</span></div>`
+        dates[i] = `<div class="${condition} date"><span>${date}</span></div>`
     })
     document.querySelector('.dates').innerHTML = dates.join('')
 

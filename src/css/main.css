@@ -104,19 +104,18 @@
     line-height: 2.5rem;
 }
 .main .today__calendar .calendar__main .days {
-    display: flex;
-    justify-content: center;
+    display: grid;
     width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: .4rem;
     padding-bottom: .5rem;
     border-bottom: 3px solid var(--borderline-deepblue);
 }
 .main .today__calendar .calendar__main .days .day {
-    width: 14%;
     text-align: center;
     line-height: 1.5rem;
 }
 .main .today__calendar .calendar__main .days .day:not(:first-child):not(:last-child) {
-    margin: 0 .2rem;
     background-color: var(--content-ligthblue);
 }
 .main .today__calendar .calendar__main .days .day:first-child, .day:last-child {
@@ -127,7 +126,7 @@
     height: 21rem;
     padding-top: .3rem;
     display: grid;
-    grid-template-columns: repeat(7, 61px);
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 3.3rem);
     column-gap: .4rem;
     row-gap: .4rem;
@@ -140,7 +139,6 @@
 }
 .date.other {
     background-color: var(--content-deepblue);
-    border: 1px solid var(--borderline-deepblue);
 }
 .today {
     position: relative;
@@ -198,7 +196,6 @@
 .today__todo .todo__list li button {
     width: 1.3rem;
     height: 1.3rem;
-    border: 1px solid #fff;
     border-radius: 50%;
     font-weight: 700;
     text-align: center;

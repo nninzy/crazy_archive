@@ -66,7 +66,10 @@
     border-radius: 0.75rem 0.75rem 0 0;
     cursor: pointer;
 }
-.header .search-google:hover h3, .header .search-google:hover > div {
+.header .search-google label {
+    display: flex;
+}
+.header .search-google:hover label {
     color: var(--dark-gray);
 }
 .header .search-google h3 {

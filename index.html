@@ -25,10 +25,12 @@
     <!-- js  -->
     <script defer src="src/js/key.js"></script>
     <script defer src="src/js/login-out.js"></script>
+    <script defer src="src/js/bookmark.js"></script>
     <script defer src="src/js/calendar.js"></script>
     <script defer src="src/js/todo.js"></script>
     <script defer src="src/js/realTime.js"></script>
     <script defer src="src/js/weather.js"></script>
+    <script defer src="src/js/googleSearch.js"></script>
 </head>
 
 <body>
@@ -45,14 +47,16 @@
                 <div class="header__chat-gpt material-symbols-outlined">chat</div>
                 <div class="header__logout material-symbols-outlined">power_settings_new</div>
             </section>
-            <label for="search--google" class="search-google">
-                <h3>Google</h3>
-                <div class="material-symbols-outlined">arrow_forward_ios</div>
+            <div class="search-google">
+                <label for="searc--google" class="search__label">
+                    <h3>Google</h3>
+                    <div class="material-symbols-outlined">arrow_forward_ios</div>
+                </label>
                 <form class="search__form" method="get" action="http://www.google.co.kr/search" target="_blank" />
-                    <input class="d-none" type="text" id="search--google" placeholder="구글에 검색할 내용을 입력하세요" name="q" size=25 maxlength=255 value=""/>
-                    <input class="d-none" type="submit" name="btnG" value="검 색"/>
+                    <input class="g-search__input d-none" type="text" id="search--google" placeholder="구글에 검색할 내용을 입력하세요" name="q" size=25 maxlength=255 value=""/>
+                    <input class="g-search__submit d-none" type="submit" name="btnG" value="검 색"/>
                 </form>
-            </label>
+            </div>
         </header>
 
         <aside class="side-bar">
@@ -65,13 +69,14 @@
             </div>
             <div class="bookmark">
                 <div class="bookmark__top">
-                    <div class="bookmark__title">북마크</div>
+                    <div class="bookmark__title">북 마 크</div>
                     <div class="bookmark__add material-symbols-outlined">add</div>
                 </div>
                 <div class="bookmark__bottom">
                     <a class="bookmark__item" href="http://www.google.com">google</a>
                     <a class="bookmark__item" href="https://nomadcoders.co/">Nomad Coder</a>
                     <a class="bookmark__item" href="https://github.com/">github</a>
+                    <ul class="optional__bookmark-items"></ul>
                 </div>
             </div>
         </aside>
@@ -119,7 +124,16 @@
             </section>
         </main>
     </div>
-
+    <div class="modal d-none">
+        <div class="modal-container">
+            <div class="modal__top">
+                <div class="modal__title"></div>
+            </div>
+            <div class="modal__main">
+                <button class="modal__cancel-btn"></button>
+            </div>
+        </div>
+    </div>
 <!-- 로그인 페이지 -->
     <div class="login">
         <img class="login-bg-img" src="./src/images/bg-image--01.jpg" alt="기본 배경 이미지">

@@ -7,6 +7,7 @@
 @import "header.css";
 @import "sidebar.css";
 @import "main.css";
+@import "modal.css";
 
 .d-none {
     display: none;
