@@ -7,11 +7,11 @@
 }
 .login .login-bg-img {
     position: absolute;
-    top: -2rem;
+    top: 50%;
     left: 50%;
     width: 100vw;
     object-fit: cover;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
 }
 .login .login-container {
     position: absolute;
@@ -19,8 +19,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--background-blue2);
-    width: 50%;
-    height: 80%;
+    width: 50vw;
+    height: 75vh;
     padding: 1rem;
     border: 3px solid var(--background-blue);
     border-radius: 1rem;
@@ -41,8 +41,8 @@
     background-color: var(--container-deepblue);
     transition: .3s;
     background-repeat: no-repeat;
-    background-position: 6.5rem 0;
-    background-size: 7.5rem;
+    background-position: right 5% bottom 50%;
+    background-size: 60%;
 }
 .login .login-container .login__chracters .login__chracter.bazzi {
     background-image: url(../images/chracter--01.png);

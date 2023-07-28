@@ -81,7 +81,7 @@ const renderBookmarkModal = () => {
     bookmarkMain.appendChild(bookmarkCancelBtn)
 
     bookmarkCancelBtn.addEventListener('click', closeBookmarkModal)
-    bookmarkSubmitBtn.addEventListener('click', addBookmark)
+    bookmarkForm.addEventListener('submit', addBookmark)
 }
 
 const openBookmarkModal = () => {
