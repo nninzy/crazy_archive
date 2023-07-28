@@ -67,7 +67,9 @@
     cursor: pointer;
 }
 .header .search-google label {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 .header .search-google:hover label {
     color: var(--dark-gray);

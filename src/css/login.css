@@ -2,13 +2,15 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
     background-color: var(--background-blue);
 }
 .login .login-bg-img {
     position: absolute;
-    top: 0;
+    top: -2rem;
     left: 50%;
-    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
     transform: translate(-50%, 0%);
 }
 .login .login-container {
